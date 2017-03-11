@@ -1,0 +1,16 @@
+## Macro title: Ustream
+## Macro has a body: N
+##
+## Developed by: Brian Call, Austin Boyd
+## Date created: 2017-03-10
+## Date updated: 2017-03-09
+## Installed by: 
+## This macro embeds videos hosted on Ustream.tv
+
+## @param id:title=Video ID|type=int|required=true|desc=The number that appears at the end of the Ustream URL|option-showNameInPlaceholder=false|option-showValueInPlaceholder=true
+## @param width:title=Width  (% or px, e.g. 1280px)|type=string|required=false|default=100%
+## @param height:title=Height (% or px, e.g. 720px)|type=string|required=false|default=100%
+<style>.embed-container { position: relative; padding-bottom: 56.25%; overflow: hidden; max-width: 100%; height: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: $paramwidth; height: $paramheight; }</style>
+<div class='embed-container'>
+<iframe src="https://www.ustream.tv/combined-embed/$paramid?social=0&videos=0&html5ui&autoplay=true&showtitle=false" style="border: 0 none transparent;"  webkitallowfullscreen allowfullscreen frameborder="no"></iframe>
+</div>
