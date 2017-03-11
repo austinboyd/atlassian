@@ -1,0 +1,17 @@
+Original Vimeo Macro 
+
+
+## Macro title: Vimeo
+## Macro has a body: N
+##
+## Developed by: Daniel Parks
+## Date created: 2015-12-29
+
+## @param id:title=Video ID|type=int|required=true|desc=The number that appears at the end of the vimeo.com URL|option-showNameInPlaceholder=false|option-showValueInPlaceholder=true
+## @param width:title=Pixel width|type=int|required=true|default=800
+## @param height:title=Pixel height|type=int|required=true|default=450
+
+<iframe src="https://player.vimeo.com/video/$paramid" width="$paramwidth" height="$paramheight" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen><a href="https://vimeo.com/$paramid">View the video here.</a></iframe>
+
+
+
