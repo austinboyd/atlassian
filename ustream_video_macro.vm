@@ -7,8 +7,8 @@
 ## Installed by: 
 ## This macro embeds videos hosted on Ustream.tv
 
-## @param social:title=Include Social Widget?|type=boolean|required=true|default=false
-## @param videos:title=Show Videos Portion?|type=boolean|required=true|default=false
+## @param social:title=Include Social Widget?|type=boolean|default=false
+## @param videos:title=Show Videos Portion?|type=boolean|default=false
 ## @param width:title=Width  (% or px, e.g. 1280px)|type=string|required=false|default=100%
 ## @param height:title=Height (% or px, e.g. 720px)|type=string|required=false|default=100%
 
