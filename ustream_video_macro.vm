@@ -7,10 +7,27 @@
 ## Installed by: 
 ## This macro embeds videos hosted on Ustream.tv
 
-## @param id:title=Video ID|type=int|required=true|desc=The number that appears at the end of the Ustream URL|option-showNameInPlaceholder=false|option-showValueInPlaceholder=true
+## @param social:title=Include Social Widget?|type=boolean|required=true|default=false
+## @param videos:title=Show Videos Portion?|type=boolean|required=true|default=false
 ## @param width:title=Width  (% or px, e.g. 1280px)|type=string|required=false|default=100%
 ## @param height:title=Height (% or px, e.g. 720px)|type=string|required=false|default=100%
+
+
+## Velocity variables 
+## IF($paramsocial == true) 
+## SET($socialvalue = 1)
+## ELSE 
+## SET($socialvalue = 0)
+## END
+
+## Velocity variables 
+## IF($paramvideos == true) 
+## SET($videovalue = 1)
+## ELSE 
+## SET($videovalue = 0)
+## END
+
 <style>.embed-container { position: relative; padding-bottom: 56.25%; overflow: hidden; max-width: 100%; height: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: $paramwidth; height: $paramheight; }</style>
 <div class='embed-container'>
-<iframe src="https://www.ustream.tv/combined-embed/$paramid?social=0&videos=0&html5ui&autoplay=true&showtitle=false" style="border: 0 none transparent;"  webkitallowfullscreen allowfullscreen frameborder="no"></iframe>
+<iframe src="https://www.ustream.tv/combined-embed/15939123?social=$socialvalue&videos=$videovalue&html5ui&autoplay=true&showtitle=false" style="border: 0 none transparent;"  webkitallowfullscreen allowfullscreen frameborder="no"></iframe>
 </div>
