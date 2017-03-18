@@ -1,0 +1,21 @@
+## Macro title: Puppet Ustream Embed with Social/Videos
+## Macro has a body: N
+##
+## Developed by: Brian Call, Austin Boyd, Jon Fairman
+## Date created: 2017-03-10
+## Date updated: 2017-03-17
+## Installed by:
+## This macro embeds a Ustream feed with the social widget to the right and the video widget below it
+
+## @noparams
+
+<div id="Container"
+	style="padding-bottom:64.427%; position:relative;
+	display:block; width: 100%">
+	<iframe width="100%" height="100%"
+		allowfullscreen webkitallowfullscreen
+		src="https://www.ustream.tv/combined-embed/15939123?videos=gallery&videosCount=4&html5ui&autoplay=true&showtitle=false"
+		frameborder="0"
+		style="position:absolute; top:0; left: 0">
+	</iframe>
+</div>
