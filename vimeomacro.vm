@@ -1,17 +1,23 @@
-Original Vimeo Macro 
-
-
-## Macro title: Vimeo
+## Macro title: Vimeo Embed
 ## Macro has a body: N
 ##
-## Developed by: Daniel Parks
+## Developed by: Daniel Parks, Austin Boyd, Brian Call, Jon Fairman
 ## Date created: 2015-12-29
+## Date updated: 2017-03-17
+## Installed by: Austin Boyd
+## This macro embeds a HTML5 Vimeo video once provided with the video ID
 
 ## @param id:title=Video ID|type=int|required=true|desc=The number that appears at the end of the vimeo.com URL|option-showNameInPlaceholder=false|option-showValueInPlaceholder=true
-## @param width:title=Pixel width|type=int|required=true|default=800
-## @param height:title=Pixel height|type=int|required=true|default=450
+## @param width:title=Width  (% or px, e.g. 1280px)|type=string|required=false|default=100%
+## @param height:title=Height (% or px, e.g. 720px)|type=string|required=false|default=100%
 
-<iframe src="https://player.vimeo.com/video/$paramid" width="$paramwidth" height="$paramheight" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen><a href="https://vimeo.com/$paramid">View the video here.</a></iframe>
-
-
-
+<div id="Container"
+	style="padding-bottom:56.34%; position:relative;
+	display:block; width: 100%">
+	<iframe width="$paramwidth" height="$paramheight"
+		allowfullscreen webkitallowfullscreen
+		src="https://player.vimeo.com/video/$paramid"
+		frameborder="0"
+		style="position:absolute; top:0; left: 0">
+	</iframe>
+</div>
