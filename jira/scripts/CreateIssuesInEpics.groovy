@@ -5,18 +5,17 @@ import com.atlassian.jira.issue.IssueInputParameters
 import com.atlassian.jira.project.Project
 import groovy.transform.Field
 import com.atlassian.jira.issue.customfields.option.LazyLoadedOption
-import com.atlassian.jira.config.SubTaskManager
+import com.atlassian.jira.issue.CustomFieldManager
 import com.atlassian.jira.user.ApplicationUser
 import org.apache.log4j.Logger
 import org.apache.log4j.Level
+
 
 // Enable logging so that you can use something like log.debug("Creating new issue, based on Collateral..")
 Logger log = Logger.getLogger("com.example")
 log.setLevel(Level.DEBUG)
 
 def customFieldManager = ComponentAccessor.getCustomFieldManager()
-@Field
-SubTaskManager subTaskManager = ComponentAccessor.getSubTaskManager()
 @Field
 ApplicationUser user = ComponentAccessor.getJiraAuthenticationContext().getLoggedInUser()
 
@@ -25,9 +24,9 @@ def customFieldName = 'Elements'
 // Get the custom field object
 def customFieldObject = customFieldManager.getCustomFieldObjectByName(customFieldName)
 // To test in the script console, uncomment the next line and enter an existing ticket number
-def issue = ComponentAccessor.getIssueManager().getIssueObject("MARCOM-3096")
+// def issue = ComponentAccessor.getIssueManager().getIssueObject("MARCOM-3096")
 // Comment out the next line when testing in the script console, otherwise it is necessary when placing in a post fuction
-// Issue issue = issue
+Issue issue = issue
 
 // Get all the values of the custom field
 def customFieldValues = customFieldObject.getValue(issue)
@@ -54,7 +53,7 @@ private Issue createIssue(Issue issue, String optionValue) {
         .setIssueTypeId("3")
         .setReporterId(user.name)
         .setSummary("Test issue - " + optionValue)
-        .addCustomFieldValue(epicLink, issue) 
+        .addCustomFieldValue(epicLink.id, issue.key)
 
 
 // This part validates the issue creation
