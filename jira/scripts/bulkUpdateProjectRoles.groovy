@@ -2,7 +2,7 @@
 
 def accountId = '123456:12345a67-bbb1-12c3-dd45-678ee99f99g0' // could also be turned into array list
 def groupName = 'Engineering Managers' // name of group in Jira
-def projectKey = ["PER", "PLFR", "ANA", "AOS", "CORE", "SREIR", "TQ", "UDI"] // an array list
+def projectKey = ["AI", "ANP", "AUDI", "CAMP", "CPT", "APP", "PRO", "FE", "CO", "DOT", "DSML", "DLVR", "DEVX", "FRAM", "EX", "PLAT", "IN", "WF", "MLP", "MOB", "PER", "PLFR", "ANA", "AOS", "CORE", "SREIR", "TQ", "UDI"]] // an array list
 def roleName = 'Administrators'
 
 // loop through projectKey array
