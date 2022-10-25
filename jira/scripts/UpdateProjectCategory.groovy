@@ -9,4 +9,10 @@ for (key in projectKey){
             "categoryId": "10001",
         ])
         .asJson()
+        
+    assert category.status == 200
+    println "Category updated for ${key}"
+    
 }
+
+return "Categories updated!"
